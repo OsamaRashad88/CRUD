@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class='container '>
+        <div class='w-75 mx-auto py-4'>
+          <h1 class="py-3 mb-5">
+            Product Management System
+          </h1>
+           
+      
+          <div class='form-group mb-3'>
+                   <label class="form-label" for="name"> name</label>
+            <input type="text" id="name" class="form-control" oninput="validate_name()"/>
+            <p id="wrongname" class="d-none">the name must be at least 4 characters and less than 9  and begin with a capital leter</p>
+          </div>
+              <div class='form-group mb-3'>
+                   <label class="form-label" for="price"> price</label>
+            <input type="text" id="price" class="form-control"  oninput="validate_price()"/>
+            <p id="wrongprice" class="d-none">the price must be between 1000 and 10000</p>
+
+          </div>
+             <div class='form-group mb-3'>
+                   <label class="form-label" for="category"> category</label>
+            <input type="text" id="category" class="form-control" oninput=" validate_category()"  />
+            <p id="wrongcategory" class="d-none">pleas enter a valid category tv or moblie or laptop</p>
+
+          </div>
+         <div class="form-group mb-3">
+            <label class="form-label" for="notes" id="'notes"> description</label>
+
+            <textarea class="form-control" id="notes" rows="3" oninput="validate_notes()"></textarea>
+                        <p id="wrongnotes" class="d-none">write some notes</p>
+
+            <span id="counterspan"></span>
+
+         </div>
+          <button class='btn btn-primary'id='addproduct' onclick='savedata()'>add product</button>
+          <button class='btn btn-warning d-none' id="updateproduct" onclick="hideupdate()">Update product</button>
+            <input type="text" id="searchBtn" class="form-control w-25 mx-auto" oninput="search(this.value)" />   </div>
+
+          <table class='table text-white'>
+            <thead>
+              <th>
+                index
+              </th>
+               <th>
+                name
+              </th>
+               <th>
+                price
+              </th>
+               <th>
+                model
+              </th>
+               <th>
+                desc
+              </th>
+               <th>
+                update
+              </th>
+               <th>
+                delete
+              </th>
+            </thead>
+              <tbody id='tbody'>
+                
+                
+                <tobdy>
+            
+          </table>
+        </div>
+        
+        
+      </div>
+      <script src="./index..js"></script>
+  </body>
+</html>
